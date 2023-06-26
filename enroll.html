@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Enroll</title>
+        <meta charset="uff-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/modul8/css/style.css">
+        
+
+        <script type=text/javascript>
+
+            function calculate() {
+                var course = 0;
+                var uniforms = 0;
+                var total = 0;
+
+                if (document.getElementById('adult').checked == true)
+                {
+                    course = 50;
+                } else if (document.getElementById('teen').checked == true){
+                    course = 30;
+                } else if (document.getElementById('child').checked == true){
+                    course = 20;
+                }
+
+                uniforms = 50 * document.getElementById('uniforms').value;
+
+                total = course + uniforms;
+
+                alert("Your total cost is: $ " + total);
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <img src="/modul8/media/image/logo.png" alt="Matrial Art Studio logo">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="enroll.html">Enroll</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <table>
+                <tr>
+                    <td><label for="firstname">First Name</label></td>
+                    <td><input type="text" id="firstname" name="firstname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Last Name</label></td>
+                    <td><input type="text" id="lastname" name="lastname"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone</label></td>
+                    <td><input type="tel" id="phone" name="phone"></td>
+                </tr>
+
+            </table>
+          
+
+            <table id="enrollprice">
+                <caption>Enroll</caption>
+                <tr>
+                    <td>Adult</td>
+                    <td>$50</td>
+                    <td>
+                        <input type="radio" id="adult" name="course" value="50">
+                    </td>
+                </tr>
+                <td>Teen</td>
+                    <td>$30</td>
+                    <td>
+                        <input type="radio" id="teen" name="course" value="30">
+                    </td>
+                </tr>
+                <td>Children</td>
+                    <td>$20</td>
+                    <td>
+                        <input type="radio" id="child" name="course" value="20">
+                    </td>
+                </tr>
+                <td>Uniforms</td>
+                    <td>$60</td>
+                    <td>
+                        <input type="number" id="uniforms" min="0" value="0">
+                    </td>
+                </tr>
+            </table>
+
+            <p><input type="submit" id="submit" value="Submit" onclick="calculate()"><br></p>
+                <input type="reset" id="reset" value="Reset"><br>
+        </main>
+
+        <footer>
+            <p>Our location: <br>
+                1234 ABC Road.<br>
+                Anytown, FL 12345
+            </p>
+            <p> Phone number: <a href='tel:5555551212'>(555)555-1212</a></p>
+            <p> Email address: <a href='mailto:email@sample.com'>email@sample.com</a></p>
+        </footer>
+    </body>
+</html>

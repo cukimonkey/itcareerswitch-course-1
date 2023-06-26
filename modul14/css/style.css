@@ -1,0 +1,171 @@
+@import url("mobilestyle.css");
+@import url("tabletstyle.css");
+
+body {
+    background-image: linear-gradient(white, white, grey);
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+nav {
+   /* background-color: white;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black; */
+    border-radius: 1.0em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+nav ul li {
+    background-color: black;
+    padding: 1em;
+    min-width: 12%;
+    margin: .25em;
+    list-style-type: none;
+    
+}
+nav ul li {
+    display: inline-block;
+    border-radius: 1em;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+figure {
+    text-align: center;
+    background-color: white;
+}
+
+figure img {
+    max-width: 400px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+}
+
+
+main {
+    background-image: linear-gradient(white, white, grey);
+    /*border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;*/
+    border-radius: 1.0em;
+    margin-bottom: 1em;
+}
+
+main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main div .column {
+    float: left;
+}
+
+main div .left {
+    width: 20%;
+    padding: 0.5%;
+    float: left;
+}
+
+
+
+main div .right {
+    float: right;
+    width: 25%;
+    padding: 0.5%;
+}
+
+/*Table styling*/
+.schedule table {
+    border: 0.1em solid black;
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 2.5%;
+}
+
+.schedule caption {
+    border: 0.1em solid black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.schedule th, .schedule td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: black;
+    color: white;
+}
+
+#enrollprice {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+}
+
+#enrollprice td {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+    padding: 0.5em;
+    text-align: center;
+}
+
+footer {
+    background-image: linear-gradient(to right, white, grey);
+    text-align: center;
+    border-radius: 1.0em;
+}
+
+
+
+
+
+/*Begin desktop*/
+@media screen and (min-width: 960px) {
+   
+header {
+    background-image: linear-gradient(to right, white, grey);
+}
+
+    header img {
+    width: auto;
+    height: 5em;
+   }
+
+   .desktop {
+    display: block;
+   }
+   
+   nav {
+    background-color: black;
+    margin-top: -5.0em;
+    width: 60%;
+    float: right;
+    border-top: solid 0.2em black;
+    border-bottom: solid 0.2em black;
+   }
+
+    main div .center {
+        padding: 0.5%;
+        width: 50%;
+        border-right: 0.3em solid black;
+        border-left: 0.3em solid black;
+    }
+}
